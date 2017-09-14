@@ -1,0 +1,5 @@
+require({
+	paths:{
+		"reg":"reg"
+	}
+})

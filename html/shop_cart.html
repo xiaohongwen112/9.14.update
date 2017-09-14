@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
+	</head>
+	<body>
+		<script src="../js/tools.js" type="text/javascript" charset="utf-8"></script>
+		<div class="header"></div>
+		<div class="content">
+			<div id="cart">
+				
+			</div>
+		</div>
+		<div class="footer"></div>
+		
+		<script type="text/javascript">
+			promiseAjax("../include/header.html").then(function(data){
+				$(".header")[0].innerHTML=data;
+			},function(){
+				console.log("ajax加载外部资源失败");
+			});
+			promiseAjax("../include/footer.html").then(function(data){
+				$(".footer")[0].innerHTML=data;
+			},function(){
+				console.log("ajax加载外部资源失败");
+			});
+		</script>
+	</body>
+</html>
